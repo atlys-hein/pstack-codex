@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Make bot ui
   short_description: Build an interface for a supported automation service
 policy:

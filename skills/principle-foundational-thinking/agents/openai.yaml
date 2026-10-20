@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle foundational thinking
   short_description: Foundational thinking in engineering work
 policy:

@@ -64,6 +64,12 @@ A fresh desktop chat independently discovered the installed `0.15.29-codex.1` ca
 
 The separate runtime exercise used two workers with disjoint files, a mid-task constraint, a completed-worker follow-up, and parent verification: all seven order-service tests passed, with only the two assigned files changed. Shell process completion was also observed through the returned process-session identifier.
 
-Resource-only package readers were not exposed in either desktop chat. Cross-package access on that different host remains unverified; local sibling reads are not evidence of a resource-only reader. No global configuration, permissions, attribution, models, or invocation policies were changed.
+Subsequent codex.2 acceptance passed in a fresh desktop chat: 14 file reads matched the published package. A separate cloud Work chat exercised real resource-only catalog and read tools: ten reads across five owning skill packages completed without errors, filesystem proxies or invented resource locators. Cloud and executor catalogs exposed 55 Pstack skills, so this verifies the exercised cross-package paths, not discovery of all 57 skills on that host. No global configuration, permissions, attribution, models, or invocation policies were changed.
 
 The repository is public source for an independent adaptation. Publishing it does not change the audience of an existing private plugin or submit a plugin to a public directory.
+
+## Skill branding and compatibility audit in codex.3
+
+All 57 skills now declare `icon_small` and `icon_large` in `agents/openai.yaml`, with a real skill-local copy of the original Poteto artwork. Plugin-level branding alone does not supply these skill UI fields. Local assets avoid traversal segments prohibited by the current [submission rules](https://developers.openai.com/plugins/deploy/submission-errors#skill-agent-metadata-errors), even though the public Codex plugin loader supports shared parent assets. No artwork or attribution was changed.
+
+The audit was refreshed against public Codex commit `46d252f8bf8b09f4ef765bc72e40f02c229da3e6` and official documentation on 2026-10-20. The acceptance guide now derives its expected version from the uploaded manifest; Correct’s UI description reflects structural prevention. Saved metadata and asset validation are distinct from visually observing every client render the icons.

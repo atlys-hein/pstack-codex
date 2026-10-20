@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle outcome oriented execution
   short_description: Outcome oriented execution in engineering work
 policy:

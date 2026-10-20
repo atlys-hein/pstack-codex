@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle laziness protocol
   short_description: Laziness protocol in engineering work
 policy:

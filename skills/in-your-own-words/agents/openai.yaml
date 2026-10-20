@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: In Your Own Words
   short_description: Restate the user goal before beginning work
 policy:

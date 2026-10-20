@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Show me your work
   short_description: Keep a decision trail with verifiable evidence
 policy:

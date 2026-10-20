@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Create verification skill
   short_description: Create a workflow that verifies the real application
 policy:

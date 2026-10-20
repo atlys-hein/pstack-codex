@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Setup pstack
   short_description: Inspect supported Codex tools and configuration
 policy:

@@ -4,7 +4,7 @@ Run these in a disposable local workspace with native tools. They test distinct 
 
 ## After upload
 
-1. Open a new Codex chat and inspect the installed plugin version. Expect `pstack-codex` version `0.15.29-codex.1`.
+1. Open a new Codex chat and inspect the installed plugin version. Expect `pstack-codex` at the version declared by the uploaded package’s `plugin.json`.
 2. Verify that the host discovers the router and the expected 57 direct-child skills. If the initial catalog is truncated, use the host's supported discovery or explicit skill selection. Do not change global context settings automatically.
 3. Invoke setup-pstack for a read-only capability report. Expect the actual native tools and limitations, no installation or config changes.
 4. Run one normal coding task and one delegated task below. Confirm the actual behavior and artifacts. Native agent support and routing are runtime-dependent.

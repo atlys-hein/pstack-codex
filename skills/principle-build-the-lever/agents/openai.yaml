@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle build the lever
   short_description: Build the lever in engineering work
 policy:

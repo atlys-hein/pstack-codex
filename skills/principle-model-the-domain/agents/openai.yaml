@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle model the domain
   short_description: Model the domain in engineering work
 policy:

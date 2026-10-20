@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Teach
   short_description: Explain the work and its important decisions plainly
 policy:

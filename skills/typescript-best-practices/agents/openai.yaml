@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Typescript best practices
   short_description: Apply TypeScript types and ownership practices
 policy:

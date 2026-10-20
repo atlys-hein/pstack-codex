@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle redesign from first principles
   short_description: Redesign from first principles in engineering work
 policy:

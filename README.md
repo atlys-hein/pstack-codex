@@ -6,7 +6,7 @@ This repository is maintained by [Heinrich Winterbach](https://github.com/atlys-
 
 ## Version and upstream status
 
-`0.15.29-codex.2` incorporates Pstack `0.15.29` at commit [`88d47514`](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack), checked on **2026-10-20**. It contains **57 skills**, including the Codex router, **23 playbooks**, and **24 engineering principles**.
+`0.15.29-codex.3` incorporates Pstack `0.15.29` at commit [`88d47514`](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack), checked on **2026-10-20**. It contains **57 skills**, including the Codex router, **23 playbooks**, and **24 engineering principles**.
 
 Changes from `0.15.25-codex.2`:
 
@@ -49,4 +49,4 @@ Structural validation covers skill metadata, manifest agreement, local links, pa
 
 Formal verification skills are instructions for building and maintaining project-specific checks. Bundling them does not prove a user's code correct or install a verifier.
 
-The upstream Poteto artwork is included and referenced in both manifests. A prior ChatGPT listing displayed a generic icon despite those references; package inclusion does not guarantee that every listing surface renders it.
+The upstream Poteto artwork is included and referenced in both plugin manifests and in all 57 skills’ UI metadata. Each skill includes its own asset to support standalone and plugin loading. A prior ChatGPT listing displayed a generic icon despite those references; package inclusion does not guarantee that every listing surface renders it.

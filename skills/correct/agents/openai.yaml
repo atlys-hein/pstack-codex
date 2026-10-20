@@ -1,5 +1,7 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Correct
-  short_description: Turn recurring repository mistakes into focused guidance
+  short_description: Prevent recurring repository mistakes with structural fixes
 policy:
   allow_implicit_invocation: true

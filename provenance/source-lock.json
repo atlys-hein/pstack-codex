@@ -1,5 +1,5 @@
 {
-  "package_version": "0.15.29-codex.2",
+  "package_version": "0.15.29-codex.3",
   "upstream": {
     "repository": "https://github.com/cursor/plugins",
     "path": "pstack",
@@ -9,12 +9,12 @@
     "tree": "34a0b817e5ea92375bb10f20b15cf750d4e8095a"
   },
   "prior_install": {
-    "version": "0.15.29-codex.1",
+    "version": "0.15.29-codex.2",
     "upstream_commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c"
   },
   "codex_source": {
     "repository": "https://github.com/openai/codex",
-    "commit": "014489466a1739c2c563cdfe57880c2c7c8680e3",
+    "commit": "46d252f8bf8b09f4ef765bc72e40f02c229da3e6",
     "checked_on": "2026-10-20",
     "review_scope": "Package loading and native runtime contract source/schema audit; behavior checks separately recorded in PORTING.md."
   },
@@ -193,5 +193,5 @@
     "skills/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
     "skills/why/references/synthesizer-prompt.md": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb"
   },
-  "plugin_packaging_docs_checked_on": "2026-10-16"
+  "plugin_packaging_docs_checked_on": "2026-10-20"
 }

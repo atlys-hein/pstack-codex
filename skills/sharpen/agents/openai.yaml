@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Sharpen
   short_description: Rewrite a prompt with expert methods and an outside check
 policy:

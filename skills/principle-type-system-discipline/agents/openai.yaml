@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle type system discipline
   short_description: Type system discipline in engineering work
 policy:

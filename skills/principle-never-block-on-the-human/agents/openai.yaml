@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle never block on the human
   short_description: Never block on the human in engineering work
 policy:

@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: "Create formal verification skill"
   short_description: "Create a reproducible formal check for critical code"
 policy:

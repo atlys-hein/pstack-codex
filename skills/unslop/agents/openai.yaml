@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Unslop
   short_description: Remove filler and artificial patterns from prose
 policy:

@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Recall
   short_description: Recover relevant work through supported chat tools
 policy:

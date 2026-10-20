@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Swarm
   short_description: Coordinate bounded native workers and their evidence
 policy:

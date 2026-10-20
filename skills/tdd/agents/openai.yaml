@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Tdd
   short_description: Use a failing regression test first when explicitly requested
 policy:

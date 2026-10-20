@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle fix root causes
   short_description: Fix root causes in engineering work
 policy:

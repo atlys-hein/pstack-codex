@@ -1,4 +1,6 @@
 interface:
+  icon_small: ./assets/logo.png
+  icon_large: ./assets/logo.png
   display_name: Principle migrate callers then delete legacy apis
   short_description: Migrate callers then delete legacy apis in engineering work
 policy:
