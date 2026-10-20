@@ -1,0 +1,5 @@
+interface:
+  display_name: Pstack
+  short_description: Engineering workflows using native Codex agents
+policy:
+  allow_implicit_invocation: true

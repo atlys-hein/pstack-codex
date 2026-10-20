@@ -1,0 +1,5 @@
+interface:
+  display_name: Arena
+  short_description: Compare independent designs and combine the best parts
+policy:
+  allow_implicit_invocation: true

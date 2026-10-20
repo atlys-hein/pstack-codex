@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle prove it works
+  short_description: Prove it works in engineering work
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle minimize reader load
+  short_description: Minimize reader load in engineering work
+policy:
+  allow_implicit_invocation: true

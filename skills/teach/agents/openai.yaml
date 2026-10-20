@@ -1,0 +1,5 @@
+interface:
+  display_name: Teach
+  short_description: Explain the work and its important decisions plainly
+policy:
+  allow_implicit_invocation: true

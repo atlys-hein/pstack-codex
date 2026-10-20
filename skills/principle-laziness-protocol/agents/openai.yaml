@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle laziness protocol
+  short_description: Laziness protocol in engineering work
+policy:
+  allow_implicit_invocation: true

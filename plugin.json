@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "pstack-codex",
+  "version": "0.15.29-codex.1",
+  "description": "Codex adaptation of Lauren Tan (Poteto)'s Pstack engineering workflows, with native delegation and independent verification.",
+  "license": "MIT",
+  "keywords": [
+    "pstack",
+    "codex",
+    "poteto",
+    "coding",
+    "subagents"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Pstack for Codex",
+        "shortDescription": "Pstack engineering workflows",
+        "longDescription": "Independent Codex adaptation of Lauren Tan (Poteto)'s MIT-licensed Pstack 0.15.29. Includes 57 skills, 23 task playbooks and engineering principles, including formal-verification workflows. Poteto Mode coordinates useful native subagents with explicit ownership, runtime tool discovery, GPT-6.1 Sol or GPT-6 Astra under the configured reasoning policy and parent verification. Includes setup diagnostics and help. Uses tools exposed by Codex; it does not install MCP servers, models, hooks or background daemons. Original Pstack credit: https://github.com/poteto and https://github.com/cursor/plugins/tree/main/pstack.",
+        "developerName": "Heinrich Winterbach",
+        "category": "Developer Tools",
+        "capabilities": [],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png",
+        "websiteURL": "https://github.com/atlys-hein/pstack-codex"
+      },
+      "onboardingSkill": "./skills/setup-pstack/SKILL.md"
+    }
+  },
+  "author": {
+    "name": "Heinrich Winterbach",
+    "url": "https://github.com/atlys-hein"
+  },
+  "homepage": "https://github.com/atlys-hein/pstack-codex",
+  "repository": "https://github.com/atlys-hein/pstack-codex"
+}

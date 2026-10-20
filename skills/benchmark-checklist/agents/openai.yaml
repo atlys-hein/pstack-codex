@@ -1,0 +1,5 @@
+interface:
+  display_name: Benchmark checklist
+  short_description: Check whether a performance measurement is trustworthy
+policy:
+  allow_implicit_invocation: true

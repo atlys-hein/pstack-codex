@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle attack the premise
+  short_description: Attack the premise in engineering work
+policy:
+  allow_implicit_invocation: true

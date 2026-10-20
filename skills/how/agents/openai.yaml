@@ -1,0 +1,5 @@
+interface:
+  display_name: How
+  short_description: Explain implementation with source-backed evidence
+policy:
+  allow_implicit_invocation: true

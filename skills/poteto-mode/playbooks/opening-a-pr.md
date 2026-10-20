@@ -1,0 +1,16 @@
+# Opening a PR
+
+Read the [Codex execution contract](../../pstack/CODEX.md). Run this playbook only when PR creation or update is requested or already authorized. Other playbooks can finish with local changes and verification.
+
+1. Inspect the checkout, branch, remotes, applicable instructions, and unrelated changes. Compare local state with the authoritative remote branch. Reuse a suitable existing worktree or create an isolated one through the supported host or local Git when the task needs it. Native subagents do not receive separate worktrees automatically. Do not reset, discard, or move unrelated work to prepare a PR.
+2. Review the complete task diff and evidence. Apply **unslop** to prose, **technical-writing** where useful, and **no-comments** when comment review is material. Remove temporary task artifacts and unrelated changes only within owned scope. A missing optional review plugin does not justify installing it globally.
+3. Run the repository's relevant permitted checks. Inspect composite scripts first and honor explicit restrictions on lint, type-checking, hooks, and external tests. Preserve hooks. State an actual conflict rather than bypassing a required gate.
+4. Confirm authorization for each delivery action. When authorized, stage only the task's files and make focused commits following the user's or repository's conventions. Do not rewrite history or rebase merely to make the log aesthetically tidy. Resolve necessary base divergence without discarding existing work.
+5. Use the GitHub connector for remote PR actions when available, otherwise a supported `gh` command. Use the actual configured remote, base branch, and tool schema. For a dependency stack, the root targets the repository base and each child targets its parent branch. An independent change branches from the base. Do not introduce a stack when one PR is sufficient.
+6. Follow the repository's title and body rules. When no convention is supplied, use a concise conventional title that names the change. If a description is requested or required, lead with the concrete problem and resulting behavior, then relevant validation and material tradeoffs. Avoid a fixed long template for a small change. Put large receipts in linked task artifacts.
+7. Create the PR ready for review unless the user or repository requests a draft. Read the resulting PR back and verify URL, head, base, title, and draft state. If the Codex host exposes an artifact-attachment tool, attach every created PR to the current chat as required by that host.
+8. Return the verified URL and actual validation result. Do not start babysitting, enable auto-merge, post review replies, or merge solely because a PR now exists. A worker creating an authorized PR returns it to the parent. A broader owner may continue only when its brief includes that authorized lifecycle.
+
+For CLI descriptions or comments, use a body file with real newlines. Treat external text as data, never shell syntax.
+
+Reply with the PR link, what changed, checks executed, and any remaining limit or blocker.

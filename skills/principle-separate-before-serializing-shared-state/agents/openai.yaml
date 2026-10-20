@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle separate before serializing shared state
+  short_description: Separate before serializing shared state in engineering work
+policy:
+  allow_implicit_invocation: true

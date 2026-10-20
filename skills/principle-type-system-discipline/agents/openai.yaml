@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle type system discipline
+  short_description: Type system discipline in engineering work
+policy:
+  allow_implicit_invocation: true

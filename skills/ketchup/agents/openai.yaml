@@ -1,0 +1,5 @@
+interface:
+  display_name: Ketchup
+  short_description: Catch up on changes and every decision waiting on you
+policy:
+  allow_implicit_invocation: true

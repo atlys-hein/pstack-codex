@@ -1,0 +1,5 @@
+interface:
+  display_name: Figure it out
+  short_description: Design a verifiable workflow for substantial unusual work
+policy:
+  allow_implicit_invocation: true

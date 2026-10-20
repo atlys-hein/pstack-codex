@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle build the lever
+  short_description: Build the lever in engineering work
+policy:
+  allow_implicit_invocation: true

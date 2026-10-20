@@ -1,0 +1,5 @@
+interface:
+  display_name: In Your Own Words
+  short_description: Restate the user goal before beginning work
+policy:
+  allow_implicit_invocation: true

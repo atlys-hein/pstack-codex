@@ -1,0 +1,5 @@
+interface:
+  display_name: Blast radius
+  short_description: Trace effects beyond the changed code
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle model the domain
+  short_description: Model the domain in engineering work
+policy:
+  allow_implicit_invocation: true

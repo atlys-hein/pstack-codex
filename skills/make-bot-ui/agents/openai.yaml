@@ -1,0 +1,5 @@
+interface:
+  display_name: Make bot ui
+  short_description: Build an interface for a supported automation service
+policy:
+  allow_implicit_invocation: true

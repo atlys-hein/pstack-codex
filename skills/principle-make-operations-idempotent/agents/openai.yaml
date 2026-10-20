@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle make operations idempotent
+  short_description: Make operations idempotent in engineering work
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: Maintain verification skill
+  short_description: Keep application verification aligned with current behavior
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle foundational thinking
+  short_description: Foundational thinking in engineering work
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: Tdd
+  short_description: Use a failing regression test first when explicitly requested
+policy:
+  allow_implicit_invocation: true

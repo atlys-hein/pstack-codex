@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle outcome oriented execution
+  short_description: Outcome oriented execution in engineering work
+policy:
+  allow_implicit_invocation: true

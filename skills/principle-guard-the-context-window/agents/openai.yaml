@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle guard the context window
+  short_description: Guard the context window in engineering work
+policy:
+  allow_implicit_invocation: true

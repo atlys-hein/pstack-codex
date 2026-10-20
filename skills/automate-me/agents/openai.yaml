@@ -1,0 +1,5 @@
+interface:
+  display_name: Automate me
+  short_description: Capture working preferences in a Codex skill
+policy:
+  allow_implicit_invocation: false

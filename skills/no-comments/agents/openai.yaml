@@ -1,0 +1,5 @@
+interface:
+  display_name: No comments
+  short_description: Review comments for useful intent and misleading claims
+policy:
+  allow_implicit_invocation: true

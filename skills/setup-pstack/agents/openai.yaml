@@ -1,0 +1,5 @@
+interface:
+  display_name: Setup pstack
+  short_description: Inspect supported Codex tools and configuration
+policy:
+  allow_implicit_invocation: false

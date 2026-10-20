@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle redesign from first principles
+  short_description: Redesign from first principles in engineering work
+policy:
+  allow_implicit_invocation: true

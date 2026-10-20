@@ -1,0 +1,5 @@
+interface:
+  display_name: Poteto Help
+  short_description: Choose a Pstack skill or workflow in Codex
+policy:
+  allow_implicit_invocation: true

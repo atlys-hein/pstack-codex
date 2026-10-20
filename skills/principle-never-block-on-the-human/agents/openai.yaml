@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle never block on the human
+  short_description: Never block on the human in engineering work
+policy:
+  allow_implicit_invocation: true

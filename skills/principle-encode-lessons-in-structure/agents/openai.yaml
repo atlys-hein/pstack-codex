@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle encode lessons in structure
+  short_description: Encode lessons in structure in engineering work
+policy:
+  allow_implicit_invocation: true

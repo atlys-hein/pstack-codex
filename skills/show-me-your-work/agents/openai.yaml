@@ -1,0 +1,5 @@
+interface:
+  display_name: Show me your work
+  short_description: Keep a decision trail with verifiable evidence
+policy:
+  allow_implicit_invocation: true

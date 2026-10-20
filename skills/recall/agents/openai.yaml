@@ -1,0 +1,5 @@
+interface:
+  display_name: Recall
+  short_description: Recover relevant work through supported chat tools
+policy:
+  allow_implicit_invocation: true

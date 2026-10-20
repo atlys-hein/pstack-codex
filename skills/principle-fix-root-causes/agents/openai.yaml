@@ -1,0 +1,5 @@
+interface:
+  display_name: Principle fix root causes
+  short_description: Fix root causes in engineering work
+policy:
+  allow_implicit_invocation: true

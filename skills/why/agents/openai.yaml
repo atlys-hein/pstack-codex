@@ -1,0 +1,5 @@
+interface:
+  display_name: Why
+  short_description: Investigate design decisions and their historical evidence
+policy:
+  allow_implicit_invocation: true
