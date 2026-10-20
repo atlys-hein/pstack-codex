@@ -2,11 +2,11 @@
 
 ## Current baseline
 
-Version `0.15.29-codex.1` ports [Lauren Tan (Poteto)'s Pstack](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack) `0.15.29` at `88d47514b82e7c44f00f2b2a72ff6dd12158038c`, checked on 2026-10-20. The previous port was `0.15.25-codex.2`, pinned to `f713f14203cd6420cec13cd7c55c32d598dbab68`.
+Version `0.15.29-codex.2` retains [Lauren Tan (Poteto)'s Pstack](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack) `0.15.29` at `88d47514b82e7c44f00f2b2a72ff6dd12158038c`, checked on 2026-10-20. It follows `0.15.29-codex.1` with instruction-loading hardening. The upstream update below describes the earlier transition from `0.15.25-codex.2`, pinned to `f713f14203cd6420cec13cd7c55c32d598dbab68`.
 
 The upstream subtree comparison found 3 added files, 23 changed files, 146 unchanged files, and no removed files. [The path comparison](upstream-comparison.json) and [source lock](source-lock.json) record exact revisions and hashes. These counts describe source coverage, not quality or performance.
 
-## Update coverage
+## Upstream update coverage
 
 | Upstream change | Treatment in this port |
 | --- | --- |
@@ -51,7 +51,19 @@ The independent reviewer and Sharpen evaluator in this update were spawned with 
 - YAML/JSON parsing, local-link resolution, manifest agreement, source coverage, unchanged execution-contract checks, file hashes, and archive integrity are checked during packaging.
 - The skill-creator Python validator could not run because its Python environment lacks PyYAML. Ruby Psych parses the skill frontmatter and metadata instead. No dependency installation, lint, or type-checking was performed.
 - Formal verifier execution on a real application was not tested in this package update. These skills do not bundle a verifier or claim a proof without executing a project-specific check.
-- The 2026-10-15 native-agent smoke test and Codex source audit are historical evidence, not a new audit of today's Codex implementation. The source audit remains pinned to `bb64b894fd67158be0f874872e6d7bfe717e7368` in the source lock.
+- The 2026-10-15 native-agent smoke test and source audit are historical evidence. A subsequent 2026-10-20 audit reviewed the public Codex implementation at `014489466a1739c2c563cdfe57880c2c7c8680e3`, official documentation, and this desktop session's live schemas. No confirmed runtime or local package-loading defect was found.
 - Official [plugin metadata and packaging guidance](https://developers.openai.com/plugins/deploy/submission) was rechecked on 2026-10-20. Successful package validation, saved plugin contents, fresh-chat discovery, and runtime behavior are separate claims. The [acceptance guide](../skills/pstack/ACCEPTANCE.md) covers post-import checks.
+
+## Instruction-loading hardening in codex.2
+
+The public loader limits an automatically injected Agent Plugin skill body to 8,000 UTF-8 bytes. Five entrypoints exceeded that limit. Their detailed guidance now lives in linked references, while entrypoints retain the essential workflow, constraints, and reference-selection instructions. The same catalog requires complete reads, including continuation after tool-output truncation; supporting references still require those complete reads.
+
+Source evidence: [host_prompt.rs](https://github.com/openai/codex/blob/014489466a1739c2c563cdfe57880c2c7c8680e3/codex-rs/ext/skills/src/host_prompt.rs#L79), [render.rs](https://github.com/openai/codex/blob/014489466a1739c2c563cdfe57880c2c7c8680e3/codex-rs/ext/skills/src/render.rs#L22), and [catalog_prompt.rs](https://github.com/openai/codex/blob/014489466a1739c2c563cdfe57880c2c7c8680e3/codex-rs/ext/skills/src/catalog_prompt.rs#L11).
+
+A fresh desktop chat independently discovered the installed `0.15.29-codex.1` catalog, including the router, Poteto Mode, and both formal-verification skills. It successfully read Poteto Mode, the sibling execution contract, the bug-fix playbook, and the sibling testing principle through the host's filesystem mechanism. This establishes discovery and cross-skill access on that installed desktop release, not automatic selection for every task or post-publication acceptance of codex.2.
+
+The separate runtime exercise used two workers with disjoint files, a mid-task constraint, a completed-worker follow-up, and parent verification: all seven order-service tests passed, with only the two assigned files changed. Shell process completion was also observed through the returned process-session identifier.
+
+Resource-only package readers were not exposed in either desktop chat. Cross-package access on that different host remains unverified; local sibling reads are not evidence of a resource-only reader. No global configuration, permissions, attribution, models, or invocation policies were changed.
 
 The repository is public source for an independent adaptation. Publishing it does not change the audience of an existing private plugin or submit a plugin to a public directory.

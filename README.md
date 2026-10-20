@@ -6,7 +6,7 @@ This repository is maintained by [Heinrich Winterbach](https://github.com/atlys-
 
 ## Version and upstream status
 
-`0.15.29-codex.1` incorporates Pstack `0.15.29` at commit [`88d47514`](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack), checked on **2026-10-20**. It contains **57 skills**, including the Codex router, **23 playbooks**, and **24 engineering principles**.
+`0.15.29-codex.2` incorporates Pstack `0.15.29` at commit [`88d47514`](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack), checked on **2026-10-20**. It contains **57 skills**, including the Codex router, **23 playbooks**, and **24 engineering principles**.
 
 Changes from `0.15.25-codex.2`:
 

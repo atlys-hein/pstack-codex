@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pstack-codex",
-  "version": "0.15.29-codex.1",
+  "version": "0.15.29-codex.2",
   "description": "Codex adaptation of Lauren Tan (Poteto)'s Pstack engineering workflows, with native delegation and independent verification.",
   "license": "MIT",
   "keywords": [
