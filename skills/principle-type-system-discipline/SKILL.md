@@ -3,6 +3,8 @@ name: "principle-type-system-discipline"
 description: "Apply when designing types, reviewing a function signature, or writing code in any statically-typed language. Make illegal states unrepresentable, brand semantic primitives, parse external data at boundaries, exhaust variants, derive from authoritative schemas."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read the [Codex execution contract](../pstack/CODEX.md). Apply this principle within the requested scope and permitted validation.
 
 # Type System Discipline

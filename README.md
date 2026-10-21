@@ -6,7 +6,7 @@ This repository is maintained by [Heinrich Winterbach](https://github.com/atlys-
 
 ## Version and upstream status
 
-`0.15.29-codex.3` incorporates Pstack `0.15.29` at commit [`88d47514`](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack), checked on **2026-10-20**. It contains **57 skills**, including the Codex router, **23 playbooks**, and **24 engineering principles**.
+`0.15.29-codex.4` incorporates Pstack `0.15.29` at commit [`88d47514`](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack), checked on **2026-10-21**. It contains **57 skills**, including the Codex router, **23 playbooks**, and **24 engineering principles**. The latest upstream repository head (`190d287`) has the same Pstack tree as our pinned source.
 
 Changes from `0.15.25-codex.2`:
 
@@ -20,7 +20,7 @@ The [source lock](provenance/source-lock.json) pins the upstream source. [Portin
 
 ## Use in Codex
 
-Import the plugin ZIP through your host's supported plugin installation flow, then open a fresh chat. Use the displayed skill names from the skill picker; a plugin namespace may be included.
+Import the plugin ZIP through your host's supported plugin installation flow, then open a fresh chat. Use the displayed skill names from the skill picker; a plugin namespace may be included. Of the 57 packaged skills, 55 permit implicit invocation. `setup-pstack` and `automate-me` remain available through explicit selection and may be omitted from implicit-use catalogs. On cloud resource readers, select the target skill’s owning package before following a cross-skill link.
 
 - **Setup pstack** reports available capabilities without changing global configuration.
 - **Poteto mode** selects a workflow for substantial engineering work.

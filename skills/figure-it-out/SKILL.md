@@ -3,6 +3,8 @@ name: "figure-it-out"
 description: "Design an auditable playbook when no narrower one fits: a large migration, an ambitious multi-part change, or work a human reviews after stepping away. Scales rigor to the task, runs a hypothesis loop, and logs decisions. Use for $figure-it-out or 'figure it out'."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It defines supported tools, bounded delegation, shared-checkout ownership, validation, and authorization. Use only capabilities exposed in this session.
 
 # Figure it out
@@ -11,7 +13,7 @@ When the task matches no playbook, design one. The deliverable before any code i
 
 ## Start
 
-Open a todolist whose first item is to read the Principles section of the **poteto-mode** skill. Then add the phases below as todos.
+Open a todolist whose first item is to read the [principles catalog](../poteto-mode/references/working-guidance.md#principles). Then add the phases below as todos.
 
 ## Phase A: Frame
 

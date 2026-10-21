@@ -5,9 +5,15 @@ Run these in a disposable local workspace with native tools. They test distinct 
 ## After upload
 
 1. Open a new Codex chat and inspect the installed plugin version. Expect `pstack-codex` at the version declared by the uploaded package’s `plugin.json`.
-2. Verify that the host discovers the router and the expected 57 direct-child skills. If the initial catalog is truncated, use the host's supported discovery or explicit skill selection. Do not change global context settings automatically.
+2. Verify the package inventory contains 57 direct-child skills. Classify the host catalog before comparing counts: 55 skills permit implicit invocation; `setup-pstack` and `automate-me` are explicit-only in their `agents/openai.yaml`. Expect those two to be omitted from an implicit-use catalog, but not necessarily from an installed-skill inventory or explicit picker. Complete supported pagination and inspect truncation warnings. Verify both explicit-only skills through the host’s supported explicit selection, without changing their policy or global context settings. Record unavailable selection separately from missing files.
 3. Invoke setup-pstack for a read-only capability report. Expect the actual native tools and limitations, no installation or config changes.
 4. Run one normal coding task and one delegated task below. Confirm the actual behavior and artifacts. Native agent support and routing are runtime-dependent.
+
+## Resource navigation
+
+On a filesystem host, resolve links relative to the current file. On a resource-only host, select the target skill’s owning package using the current catalog or supported explicit selector, then read the exact linked resource with its provided authority. Do not carry the source skill’s package into a sibling read or construct opaque package IDs from an example.
+
+Check Poteto Mode → Pstack’s `CODEX.md`, Pstack → `setup-pstack`, and a same-skill playbook read. Record explicit-only selection and cross-package access separately. If a wrong-package call fails, retain that evidence and retry through the verified owner; only a failure there supports an access problem. A successful recovery does not make the original navigation instructions friction-free.
 
 ## Behavior scenarios
 

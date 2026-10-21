@@ -3,6 +3,8 @@ name: "create-formal-verification-skill"
 description: "Generate a project-local skill that formally verifies code where a bug costs the most and tests reach the least, using a tool that fits. Use for $create-formal-verification-skill, \"model-check this race\", or \"prove this invariant\" when concurrency, retries, state machines, parsers, or unsafe code need more than tests."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It defines supported tools, validation, shared-checkout ownership, and authorization. Use only capabilities exposed in this session.
 
 # Create a formal verification skill

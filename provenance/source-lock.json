@@ -1,24 +1,25 @@
 {
-  "package_version": "0.15.29-codex.3",
+  "package_version": "0.15.29-codex.4",
   "upstream": {
     "repository": "https://github.com/cursor/plugins",
     "path": "pstack",
     "commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c",
     "version": "0.15.29",
     "last_pstack_commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c",
-    "tree": "34a0b817e5ea92375bb10f20b15cf750d4e8095a"
+    "tree": "34a0b817e5ea92375bb10f20b15cf750d4e8095a",
+    "checked_repository_head": "190d28736eff128ec94f502a22c7fe0c4b56cd37"
   },
   "prior_install": {
-    "version": "0.15.29-codex.2",
+    "version": "0.15.29-codex.3",
     "upstream_commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c"
   },
   "codex_source": {
     "repository": "https://github.com/openai/codex",
-    "commit": "46d252f8bf8b09f4ef765bc72e40f02c229da3e6",
-    "checked_on": "2026-10-20",
+    "commit": "c7234c1174b27d9c55199fba0d546dc27d1b0415",
+    "checked_on": "2026-10-21",
     "review_scope": "Package loading and native runtime contract source/schema audit; behavior checks separately recorded in PORTING.md."
   },
-  "checked_on": "2026-10-20",
+  "checked_on": "2026-10-21",
   "upstream_file_sha256": {
     ".cursor-plugin/plugin.json": "079de0bc2c331df98ecf388b84c938a3a61910f49a1cc37e680d9e2ca9bcd324",
     ".gitignore": "8ffe9de56bd30c1a95cd945262d6e3ac355ada4111551dde41f67851b9f1fc55",
@@ -193,5 +194,5 @@
     "skills/why/references/sources/slack.md": "3bc6309f5c7b26ace3b919dbd7f7b048861dd2020f910fe24f656cc74b3b661c",
     "skills/why/references/synthesizer-prompt.md": "11c62671aa7b7a6e3d36929ffe2b59bf95e6ca664eee4d93e6ee527dd3390ddb"
   },
-  "plugin_packaging_docs_checked_on": "2026-10-20"
+  "plugin_packaging_docs_checked_on": "2026-10-21"
 }

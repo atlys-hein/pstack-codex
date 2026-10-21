@@ -1,6 +1,6 @@
 # Pstack skill index
 
-Read the router and matched workflow, then only the relevant references. Paths are relative to this file.
+Read the router and matched workflow, then only the relevant references. Paths are relative to this file on filesystem hosts; resource hosts must select each target skill’s owning package as described in [the contract](CODEX.md). This index lists all 57 packaged skills. `setup-pstack` and `automate-me` are explicit-only and may be absent from implicit-use catalogs.
 
 ## Entry and help
 

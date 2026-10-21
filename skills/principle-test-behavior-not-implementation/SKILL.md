@@ -3,6 +3,8 @@ name: "principle-test-behavior-not-implementation"
 description: "Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read the [Codex execution contract](../pstack/CODEX.md). Apply this principle within the requested scope and permitted validation.
 
 

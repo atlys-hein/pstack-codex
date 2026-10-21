@@ -3,6 +3,8 @@ name: "poteto-mode"
 description: "Run substantial coding, debugging, performance, and multi-step delivery work with deliberate Codex subagents, scoped ownership, and evidence-based verification. Use when the user asks for Poteto Mode or this working style."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 # Poteto mode
 
 Read the [Codex execution contract](../pstack/CODEX.md) before this workflow. It defines capability discovery, native agent lifecycle, the model policy, worktree safety, and authorization. The parent chat owns the selected playbook, integration, and the final answer. A worker receives a concrete assignment, not an instruction to route the whole task again.

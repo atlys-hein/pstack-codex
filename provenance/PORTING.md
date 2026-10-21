@@ -2,7 +2,7 @@
 
 ## Current baseline
 
-Version `0.15.29-codex.2` retains [Lauren Tan (Poteto)'s Pstack](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack) `0.15.29` at `88d47514b82e7c44f00f2b2a72ff6dd12158038c`, checked on 2026-10-20. It follows `0.15.29-codex.1` with instruction-loading hardening. The upstream update below describes the earlier transition from `0.15.25-codex.2`, pinned to `f713f14203cd6420cec13cd7c55c32d598dbab68`.
+Version `0.15.29-codex.4` retains [Lauren Tan (Poteto)'s Pstack](https://github.com/cursor/plugins/tree/88d47514b82e7c44f00f2b2a72ff6dd12158038c/pstack) `0.15.29`. On 2026-10-21, upstream head `190d28736eff128ec94f502a22c7fe0c4b56cd37` has the same Pstack tree as the pinned source. This revision corrects discovery expectations and cloud resource navigation. The upstream comparison below records the earlier transition from `0.15.25-codex.2`.
 
 The upstream subtree comparison found 3 added files, 23 changed files, 146 unchanged files, and no removed files. [The path comparison](upstream-comparison.json) and [source lock](source-lock.json) record exact revisions and hashes. These counts describe source coverage, not quality or performance.
 
@@ -25,7 +25,7 @@ All 56 current upstream skill names are represented, plus the Codex router: 57 s
 
 ## Codex execution
 
-The [shared execution contract](../skills/pstack/CODEX.md) remains unchanged in this update. It owns tool discovery, native agent lifecycle, supported model/fork combinations, bounded ownership, authorization, and parent verification.
+The [shared execution contract](../skills/pstack/CODEX.md) now distinguishes invocation policy from package inventory and specifies owning-package resource reads. It owns tool discovery, native agent lifecycle, supported model/fork combinations, bounded ownership, authorization, and parent verification.
 
 | Upstream platform mechanism | Codex treatment |
 | --- | --- |
@@ -73,3 +73,13 @@ The repository is public source for an independent adaptation. Publishing it doe
 All 57 skills now declare `icon_small` and `icon_large` in `agents/openai.yaml`, with a real skill-local copy of the original Poteto artwork. Plugin-level branding alone does not supply these skill UI fields. Local assets avoid traversal segments prohibited by the current [submission rules](https://developers.openai.com/plugins/deploy/submission-errors#skill-agent-metadata-errors), even though the public Codex plugin loader supports shared parent assets. No artwork or attribution was changed.
 
 The audit was refreshed against public Codex commit `46d252f8bf8b09f4ef765bc72e40f02c229da3e6` and official documentation on 2026-10-20. The acceptance guide now derives its expected version from the uploaded manifest; Correct’s UI description reflects structural prevention. Saved metadata and asset validation are distinct from visually observing every client render the icons.
+
+## Discovery and resource navigation in codex.4
+
+The earlier acceptance guide incorrectly required all 57 packaged skills in host discovery. The package has 55 implicit-enabled skills and two explicit-only skills, `setup-pstack` and `automate-me`, declared in their `agents/openai.yaml`. A 55-entry implicit-use catalog is consistent with that policy. Installed inventories and explicit pickers may expose all 57; initial prompt truncation is a separate concern. The [official skills documentation](https://learn.chatgpt.com/docs/build-skills#optional-metadata) explains the invocation flag. The policy itself is unchanged.
+
+The 2026-10-21 cloud audit reported both explicit-only skills readable through explicit selection. It also demonstrated that reading a sibling resource through the originating package fails, while selecting the owning package succeeds. This is evidence of a package boundary, not missing files. Earlier successful cross-package reads did not prove that the navigation instructions were sufficient. The contract now states the owner-selection procedure, and every non-router entrypoint supplies the short instruction before its first cross-skill contract link. No session-specific aliases or opaque package IDs are bundled.
+
+Acceptance checks now separate inventory, filtered discovery, explicit selection, resource access, and execution. Setup, help, and the index use the same distinctions. Figure It Out’s stale reference to a moved principles section now links to the current reference. The source lock and package manifest record the current review rather than treating the old catalog count as an unconditional expectation.
+
+Current-source inspection uses Codex `c7234c1174b27d9c55199fba0d546dc27d1b0415`. Structural checks and independent instruction review apply to this revision. Recorded cloud observations apply to the preceding installed release; they are not a fresh cloud execution of codex.4. No lint or type-checking is part of this documentation update. A deep audit cannot establish that every future host or workflow is defect-free.

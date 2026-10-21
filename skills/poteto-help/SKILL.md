@@ -3,6 +3,8 @@ name: "poteto-help"
 description: "Guides users through pstack setup, $poteto-mode, and picking the skill, playbook, or principle for a task. Type $poteto-help with a question."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It defines supported tools, bounded delegation, shared-checkout ownership, validation, and authorization. Use only capabilities exposed in this session.
 
 # Poteto help
@@ -21,7 +23,7 @@ Setup can point to [create-verification-skill](../create-verification-skill/SKIL
 
 A useful first task names the goal, available evidence, constraints, and a check for done. [Prompting guidance](references/prompting.md) and [recipes](references/recipes.md) provide examples. The user does not need to hand-write the skill sequence.
 
-The installed skill catalog and invocation policy control discovery. A skill's availability does not mean it ran. The agent should state when it applies a skill and follow the user's active task across later turns. In a new chat, invoke the workflow again when needed.
+The installed skill catalog and invocation policy control discovery. `setup-pstack` and `automate-me` are explicit-only; their absence from an implicit-use catalog is expected. Select them through the host’s supported explicit mechanism when requested. A skill's availability does not mean it ran. The agent should state when it applies a skill and follow the user's active task across later turns. In a new chat, invoke the workflow again when needed.
 
 ## Pick a skill
 

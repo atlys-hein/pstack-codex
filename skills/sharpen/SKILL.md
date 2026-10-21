@@ -3,6 +3,8 @@ name: "sharpen"
 description: "When asked to sharpen or deepen a prompt, rewrite it with expert methods, raw evidence, and an outside check. Return the rewritten prompt without executing its task. Use for $sharpen."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It defines supported tools, bounded delegation, shared-checkout ownership, validation, and authorization. Use only capabilities exposed in this session.
 
 # Sharpen

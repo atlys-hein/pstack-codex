@@ -3,6 +3,8 @@ name: "setup-pstack"
 description: "Inspect Pstack capabilities and explain model, delegation, and validation settings in the current Codex environment. Change configuration only when requested."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It defines supported tools, bounded delegation, shared-checkout ownership, validation, and authorization. Use only capabilities exposed in this session.
 
 # Setup pstack
@@ -11,7 +13,7 @@ Report what this Codex session can actually do. This workflow is read-only by de
 
 ## Inspect capabilities
 
-1. Read the shared Codex contract and applicable project instructions. Locate installed Pstack through the skill catalog, not a guessed cache path.
+1. Read the shared Codex contract and applicable project instructions. Locate installed Pstack through the current skill catalog or supported explicit selector, not a guessed cache path. When diagnosing discovery, compare the inventory with invocation metadata: 57 packaged skills, 55 permitting implicit invocation, and explicit-only `setup-pstack` and `automate-me`. Report the catalog type and any pagination or truncation; do not treat those two omissions from an implicit-use catalog as missing files.
 2. Inspect the current tool catalog for native delegation, agent status and messages, repository access, browser or app control, connectors, and scheduling. Name unavailable capabilities explicitly.
 3. Read relevant existing project configuration only when it changes the answer. Do not scan credentials, unrelated chats, or private application databases.
 4. Determine available model overrides only from the live tool schema or runtime model catalog for this account. Use official documentation to interpret supported settings, not to infer availability. Do not infer model availability from a marketing name, alter a model identifier, or probe unsupported values by spawning agents.

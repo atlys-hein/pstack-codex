@@ -3,6 +3,8 @@ name: "swarm"
 description: "Run bounded parallel workers over independent slices or alternative attempts, drain their results, and return one evidenced report. Use for swarm or explicit parallel coverage."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It defines supported tools, bounded delegation, shared-checkout ownership, validation, and authorization. Use only capabilities exposed in this session.
 
 # Swarm

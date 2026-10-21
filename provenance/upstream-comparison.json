@@ -5,13 +5,14 @@
     "upstream_commit": "f713f14203cd6420cec13cd7c55c32d598dbab68"
   },
   "current": {
-    "adaptation_version": "0.15.29-codex.1",
+    "adaptation_version": "0.15.29-codex.4",
     "upstream_version": "0.15.29",
     "repository_commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c",
     "last_pstack_commit": "88d47514b82e7c44f00f2b2a72ff6dd12158038c",
-    "pstack_tree": "34a0b817e5ea92375bb10f20b15cf750d4e8095a"
+    "pstack_tree": "34a0b817e5ea92375bb10f20b15cf750d4e8095a",
+    "checked_repository_head": "190d28736eff128ec94f502a22c7fe0c4b56cd37"
   },
-  "checked_on": "2026-10-20",
+  "checked_on": "2026-10-21",
   "counts": {
     "added": 3,
     "removed": 0,

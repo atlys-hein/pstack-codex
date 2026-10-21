@@ -3,6 +3,8 @@ name: "principle-make-operations-idempotent"
 description: "Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read the [Codex execution contract](../pstack/CODEX.md). Apply this principle within the requested scope and permitted validation.
 
 

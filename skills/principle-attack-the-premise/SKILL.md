@@ -3,6 +3,8 @@ name: "principle-attack-the-premise"
 description: "Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it."
 ---
 
+On resource hosts, select the target skill’s owning package from the current catalog or supported explicit selector before reading a cross-skill link; retain its provided authority and resource identifier.
+
 Read the [Codex execution contract](../pstack/CODEX.md). Apply this principle within the requested scope and permitted validation.
 
 
