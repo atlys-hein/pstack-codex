@@ -57,7 +57,7 @@ Use **figure-it-out** when a large or unusual task needs a bespoke workflow. Use
 | Match existing UI pixels and states | [Visual parity](playbooks/visual-parity.md) |
 | Create or modify skill instructions | [Authoring a skill](playbooks/authoring-a-skill.md) |
 | Evaluate a skill or prompt change | [Eval](playbooks/eval.md) |
-| Check or repair PR readiness | [Babysit](playbooks/babysit.md) |
+| Check or repair PR readiness; assess or handle Cubic comments | [Babysit](playbooks/babysit.md) |
 | Land explicitly authorized changes | [Shipping](playbooks/shipping.md) |
 | Continue one task to a checkable condition | [Autonomous run](playbooks/autonomous-run.md) |
 | Coordinate a standing multi-unit program | [Orchestrate](playbooks/orchestrate.md) |
