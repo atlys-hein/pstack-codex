@@ -13,17 +13,21 @@ Bundled skills live at `../<name>/SKILL.md` relative to this file. Read only the
 
 ## Working rules
 
+Open the task by restating the user's goal, the problem it solves, and the smallest expected change in your own words. Continue without waiting for confirmation. If evidence rules out the requested change, show it and stop that change. Carry the goal into each worker brief. Open the final report with it, except for a fully specified one-line edit. When a PR description is requested or required, lead its rationale with the goal while preserving the user's title and body conventions.
+
 For substantial work, read [the working rules](references/working-guidance.md#working-rules), including the Feature throughput checkpoint. Select principles from [the catalog](references/working-guidance.md#principles) and read each matched leaf in full.
 
 Use **how** to ground changes and **why** for history or motivation. Settle empirical questions with evidence. Name state ownership before implementation. Route architecture decisions to **architect**, independent coverage to **swarm**, competing designs to **arena**, and contested designs to **interrogate**. Use **unslop** for prose, **technical-writing** for substantial docs, and the available **skill-creator** for skills.
 
-Verify the real UI, CLI, or public library interface. Use **benchmark-checklist** for measured performance, **Babysit** for PR status, **Shipping** for authorized landing, and **show-me-your-work** for long or multi-phase work.
+Verify the real UI, CLI, or public library interface. Before measuring, read **principle-explain-the-number** and name the result that would change a decision and the expected noise floor. Use **benchmark-checklist** for performance measurements, **Babysit** for PR status, **Shipping** for authorized landing, and **show-me-your-work** for long or multi-phase work.
 
 ## Autonomy
 
 Continue through the authorized implementation and relevant verification. Preserve the user's scope, repository rules, existing changes, and explicit gates. A skill never grants permission to commit, publish, merge, deploy, send messages, delete data, purchase resources, or change global configuration. Use existing authorization when it covers the action; ask only for the missing decision at the point it matters.
 
 "Keep going" means continue the current work within the session's capabilities and budget. Persistent scheduling requires a user request and a supported automation tool. Do not promise that an agent survives session shutdown. Disagree when the evidence warrants it and state the practical tradeoff plainly.
+
+Treat later messages as steering the active goal unless the user cancels or replaces it. After a correction, interruption, or resume, restate the current goal and what still applies, inspect current artifacts, and continue the remaining work. A stopped turn does not establish completion.
 
 ## Native subagent orchestration
 
@@ -62,7 +66,7 @@ Use **figure-it-out** when a large or unusual task needs a bespoke workflow. Use
 | Continue one task to a checkable condition | [Autonomous run](playbooks/autonomous-run.md) |
 | Coordinate a standing multi-unit program | [Orchestrate](playbooks/orchestrate.md) |
 | Build independent PRs with authorized landing | [Autopilot-full](playbooks/autopilot-full.md) |
-| Build a dependency stack for the user to land | [Autopilot-stack](playbooks/autopilot-stack.md) |
+| Build and verify PRs for the user to land, stacking only dependencies | [Autopilot-stack](playbooks/autopilot-stack.md) |
 | Resume existing work | [Session pickup](playbooks/session-pickup.md) |
 | Stop and preserve a resumable checkpoint | [Pause safely](playbooks/pause-safely.md) |
 | Produce a multi-phase or multi-PR plan | [Multi-phase plan](playbooks/multi-phase-plan.md) |

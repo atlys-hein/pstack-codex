@@ -17,7 +17,7 @@ Every candidate gets the same prompt, so the prompt is the contract.
 
 1. State the artifact each candidate is producing.
 2. Derive the rubric, 3-6 concrete gradeable criteria for what success looks like on *this* task. It is the picker's tool in Phase D. Candidates only see the task.
-3. Use two independent candidates by default when distinct alternatives can change the decision. Honor an explicit user count and cap active workers at the host limit. Apply the shared model policy, including its default effort pairs and verified inheritance rules. A different model is optional, never a condition of validity. If delegation is unavailable, generate alternatives sequentially and label the independence gap.
+3. Use two independent candidates by default when distinct alternatives can change the decision. Honor an explicit user count and cap active workers at the host limit. Apply the shared model policy, including its default effort pairs and verified inheritance rules. A different model is optional, never a condition of validity. On a rejected model selection, use only a supported pair permitted by the contract, or drop that candidate and explain why. Replace a dropped candidate when another permitted selection is available; never guess model identifiers or silently inherit unknown settings. If delegation is unavailable, generate alternatives sequentially and label the independence gap.
 4. Give each candidate its own output location (an explicitly assigned worktree for conflicting repository edits, otherwise `work/arena-<slug>/candidate-<n>/`), per the **separate-before-serializing-shared-state** principle skill.
 
 ## Phase B: Fan out
@@ -28,11 +28,13 @@ If a candidate produces no output, proceed with N-1 and note the dropout.
 
 ## Phase C: Cross-judge
 
-After all candidates stop writing, delegate one read-only cross-judge when capacity and task value justify it. The judge follows the shared model policy, sees the rubric and path-labeled candidates, scores each criterion, and recommends a base. Its independent context matters more than its model. Read the candidates yourself while it works. If no judge is available, apply the rubric yourself and report the missing independent check.
+After all candidates stop writing, delegate one read-only judge in a fresh context when capacity and task value justify it. The user permits GPT-family judges in this Codex port. Prefer the other supported model within the shared Sol/Astra policy when it is available, using its permitted model/effort pair. If only one permitted model is available, use a fresh independent judge on that model and say so. Never guess a model, use unknown inheritance, or expand the allowed model set. Sol and Astra are both GPT models: call this independent review, not cross-family model diversity.
+
+The judge sees the rubric and path-labeled candidates, scores each criterion, and recommends a base. Read the candidates yourself while it works. If no permitted judge can run, apply the rubric yourself in Phase D and report the skipped independent check.
 
 ## Phase D: Pick a base
 
-Read every candidate end to end before picking. Score each against the rubric criterion by criterion, not on holistic feel, and compare with the cross-judge. Agreement on the base confirms the pick. Disagreement means one of you is biased or the rubric was ambiguous. Read both rationales before deciding.
+Read every candidate end to end before picking. Score each against the rubric criterion by criterion, not on holistic feel, and compare with the cross-judge when Phase C ran one. Agreement on the base confirms the pick. Disagreement means one of you is biased or the rubric was ambiguous. Read both rationales before deciding.
 
 Pick the base a future maintainer can extend most easily without breaking invariants. When two feel tied, prefer the cleaner boundary or smaller API, per the Laziness Protocol.
 
@@ -48,4 +50,4 @@ Verify the synthesized artifact like any other output, per the **prove-it-works*
 
 ## Outputs
 
-One synthesized artifact, with a short synthesis note alongside naming the base and why, the cross-judge's verdict, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.
+One synthesized artifact, with a short synthesis note alongside naming the base and why, the cross-judge's verdict or why Phase C skipped it, each graft with its source candidate, what was rejected and why, any convergence or dropouts, and the verification result.

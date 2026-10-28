@@ -4,10 +4,10 @@ Read the [Codex execution contract](../../pstack/CODEX.md). The deliverable is a
 
 1. Inspect scope and decide the appropriate size. A one-file change with an obvious approach may need a short plan rather than a program document. Explain that choice and still provide the requested planning outcome.
 2. Resolve factual questions from source and available evidence. Use bounded read-only workers for independent subsystem questions. They return file pointers, contracts, permitted validation commands, and uncertainty. Run a prototype only when the planning request authorizes that local experiment; otherwise record the unproven assumption and the proposed experiment.
-3. Choose the execution workflow from [Autonomous run](autonomous-run.md), [Autopilot-full](autopilot-full.md), [Autopilot-stack](autopilot-stack.md), or [Orchestrate](orchestrate.md). Define who owns implementation, integration, review, and any authorized landing. A multi-phase local change need not become a multi-PR program.
+3. Choose the execution workflow from [Autonomous run](autonomous-run.md), [Autopilot-full](autopilot-full.md), [Autopilot-stack](autopilot-stack.md), or [Orchestrate](orchestrate.md). Choose Autopilot-full when landing is authorized and Autopilot-stack when the user lands the PRs. The latter stacks only dependencies. Define who owns implementation, integration, review, and any authorized landing. A multi-phase local change need not become a multi-PR program.
 4. Use the template below, scaling it to the task. Give each unit one coherent change and its own observable acceptance criteria. Name dependencies, file ownership, shared resources, and blocking prerequisites. Every completed box needs an evidence artifact or an explicit not-applicable reason.
 5. Write with **technical-writing** and **unslop**. Keep the body as instructions for the future owner. Put alternatives, rationale, and unresolved risks in appendices. Save in the requested location or the permitted task deliverable area, not a guessed agent store.
-6. Validate the plan directly against the source and available runtime. Check file and tool references, dependency order, ownership collisions, authorization boundaries, the measurement design, and completion evidence. No fixed-number worker script or platform-specific scheduler is required.
+6. Validate the plan directly against the source and available runtime. Check file and tool references, dependency order, ownership collisions, authorization boundaries, the measurement design, and completion evidence. When checking prose, respect fenced code and matching inline backtick delimiters, including multi-backtick spans containing literal backticks. Unmatched delimiters do not hide prose errors. No Cursor plan-validator script or platform-specific scheduler is required.
 7. Hand back the plan and its validation result. Execution begins only when requested or already included in the user's task. A persistent schedule is a separate explicit request that uses the supported automation tool.
 
 ## Verification design
@@ -16,9 +16,11 @@ Specify proof for each unit's actual risk. Behavior changes need observable runt
 
 For a user-facing change, name the real surface, supported driver, initial state, input, expected end state, and receipt. Include a regression scenario against the base when it exists. If the base lacks the feature, say so and test the new behavior plus the end state the user waits for. Do not invent a baseline result.
 
-For a performance-sensitive unit, name the metric, workload, baseline, interleaved probe, samples, completed work and error counts, and a failure threshold. Both sides must measure comparable work. If the feature does not exist on the base, use an absolute budget for the added work and end-to-end state rather than a ratio between unlike scenarios.
+Before a performance or quantitative eval run, name the result that would change a decision and the noise floor. For a performance-sensitive unit, also name the metric, workload, baseline, interleaved probe, samples, completed work and error counts, and a failure threshold. Both sides must measure comparable work. If the feature does not exist on the base, use an absolute budget for the added work and end-to-end state rather than a ratio between unlike scenarios. A run-to-run spread larger than the effect cannot support the decision.
 
 Choose verification lanes by distinct risks and run them within the host's capacity. Apply the shared model policy before spawning. Do not require ten workers, a particular cloud environment, screenshots for a nonvisual API, or a performance experiment for prose. Mark an irrelevant category with a concrete reason. Preserve every user-requested human review gate. Additional approval is needed only where the actual request or governing instructions require it.
+
+For PR programs, plan broad independent verification once at the code-ready head. Repeat it for new behavior, a redesign, or a large new diff. A minor fix, conflict resolution, or necessary rebase gets one verifier for affected scenarios. A wording-only change gets document inspection and applicable checks, without another behavioral verifier. Apply the execution playbook's blocking rule to findings. Base-only defects are recorded against the base unless the PR copies or newly reaches them. Missing required evidence remains open.
 
 ## Plan template
 
@@ -57,8 +59,10 @@ Use <resolved execution-playbook path>. <Ownership and authorized delivery scope
 - [ ] <Local integration, authorized commit/PR workflow, or authorized landing rule>.
 - [ ] Run only the applicable permitted checks; preserve hooks and user restrictions.
 - [ ] For PRs, verify the actual base, current head, review state, and attached URL.
-- [ ] Bind each verdict to the checked head and base; reassess after either changes.
-- [ ] Preserve user gates and the single owner of any stack topology.
+- [ ] Bind each verdict to the checked head and base; reassess affected evidence after either changes.
+- [ ] Keep the code-ready base during fix rounds unless it conflicts, breaks relevant CI, or gains a known concurrent change to the same files.
+- [ ] Preserve user gates and one writer for each PR branch. Coordinate dependent restacks bottom-up through their owners.
+- [ ] Apply <execution playbook's blocking rule> and record non-blocking follow-ups.
 
 ### Verification setup
 
@@ -90,7 +94,7 @@ Use <resolved execution-playbook path>. <Ownership and authorized delivery scope
 
 - [ ] <Scenario, supported driver, initial state, input, expected end state, and receipt>.
 
-**Verify performance.** <Metric, probe, measured baseline, samples, work/error counts, and failure threshold, or not applicable with a reason.>
+**Verify performance.** <Decision-changing result, noise floor, metric, probe, measured baseline, samples, work/error counts, and failure threshold, or not applicable with a reason.>
 
 **Review gate.** <User-required gate and evidence, or no additional approval required.>
 

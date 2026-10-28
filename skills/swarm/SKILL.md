@@ -20,9 +20,9 @@ Read [the Codex execution contract](../pstack/CODEX.md) before this workflow. It
 
 Spawn through the native tool and live schema described in the shared contract. Each brief states the goal, scope, owned output, allowed side effects, verification, and result format. Pass needed context directly or by existing artifact path. Children solve their slice and must not recursively launch the full swarm unless the parent explicitly delegates a bounded subplan.
 
-Reports use `PASS`, `ISSUES`, or `BLOCKED`, with evidence and unresolved gaps. A proven defect report lists every confirmed issue in that slice. When comparing revisions, the brief names exact SHAs. Measurement briefs also name sample counts, sample meaning, and ordering. Workers record those in their results.
+Reports use `PASS`, `ISSUES`, or `BLOCKED`, with evidence and unresolved gaps. A proven defect report lists every confirmed issue in that slice. When comparing revisions, the brief names exact SHAs. Before any measurement, name the result that would change a decision and the noise floor. Measurement briefs also name sample counts, sample meaning, and ordering. Workers record those in their results.
 
-Use lifecycle and messaging tools to track work and resolve overlaps. Drain workers before integrating or validating their outputs. If a worker drops out, preserve its evidence and retry once when useful. Record any remaining coverage gap.
+Use the live lifecycle and messaging tools to track work and resolve overlaps. Carry the current goal and constraints into steers or resumes. Use supported completion waits shorter than 60 seconds, or a nonblocking status path when the schema cannot provide that wait. Read the delivered reports after a wake. Drain workers before integrating or validating their outputs. If a worker drops out, preserve its evidence and retry once when useful. Record any remaining coverage gap.
 
 ## Aggregate
 

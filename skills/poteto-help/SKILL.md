@@ -35,6 +35,8 @@ Use **how** for current mechanics, **why** for historical reasons, and **teach**
 
 Playbooks live inside [poteto-mode](../poteto-mode/SKILL.md). They are not separately registered skills. Describe the work to select one, or name a playbook directly. Examples include investigating a bug, taking over a branch, planning a migration, reviewing a PR, or pausing safely.
 
+"Full autopilot on this queue" selects Autopilot-full when landing is authorized. "Autopilot, don't merge" selects Autopilot-stack, which builds and verifies PRs for the user to land. It stacks a PR only when that PR builds on another one.
+
 A status question stays read-only. A request to babysit a PR allows only the requested work and does not imply merge permission. Commits, pushes, PR creation, merges, issue creation, and messages follow the user's explicit authorization and repository rules.
 
 A request for a plan returns a plan. Use Codex Plan mode when available and appropriate; a skill cannot switch modes by inventing a tool call. A request for a design can use prototypes or **architect** within the requested scope.

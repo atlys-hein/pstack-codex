@@ -2,6 +2,6 @@ interface:
   icon_small: ./assets/logo.png
   icon_large: ./assets/logo.png
   display_name: Interrogate
-  short_description: Independently challenge a design or code change
+  short_description: Prove failures in a design or code change
 policy:
   allow_implicit_invocation: true

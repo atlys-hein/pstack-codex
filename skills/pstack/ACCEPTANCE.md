@@ -5,7 +5,7 @@ Run these in a disposable local workspace with native tools. They test distinct 
 ## After upload
 
 1. Open a new Codex chat and inspect the installed plugin version. Expect `pstack-codex` at the version declared by the uploaded package’s `plugin.json`.
-2. Verify the package inventory contains 57 direct-child skills. Classify the host catalog before comparing counts: 55 skills permit implicit invocation; `setup-pstack` and `automate-me` are explicit-only in their `agents/openai.yaml`. Expect those two to be omitted from an implicit-use catalog, but not necessarily from an installed-skill inventory or explicit picker. Complete supported pagination and inspect truncation warnings. Verify both explicit-only skills through the host’s supported explicit selection, without changing their policy or global context settings. Record unavailable selection separately from missing files.
+2. Verify the package inventory contains 59 direct-child skills. Classify the host catalog before comparing counts: 57 skills permit implicit invocation; `setup-pstack` and `automate-me` are explicit-only in their `agents/openai.yaml`. Expect those two to be omitted from an implicit-use catalog, but not necessarily from an installed-skill inventory or explicit picker. Complete supported pagination and inspect truncation warnings. Verify both explicit-only skills through the host’s supported explicit selection, without changing their policy or global context settings. Record unavailable selection separately from missing files.
 3. Invoke setup-pstack for a read-only capability report. Expect the actual native tools and limitations, no installation or config changes.
 4. Run one normal coding task and one delegated task below. Confirm the actual behavior and artifacts. Native agent support and routing are runtime-dependent.
 
@@ -34,6 +34,14 @@ Check Poteto Mode → Pstack’s `CODEX.md`, Pstack → `setup-pstack`, and a sa
 | Check a PR's status. | Read-only current-head CI/review evidence. No edits, comment posts, thread resolution, merge or watcher installation. |
 | Build a change but do not commit or publish it. | A verified local result and no external write. |
 | Pause an active multi-step run. | Owned workers/processes are handled through supported tools and a usable checkpoint records pending work. No invented future wakeup. |
+
+## New workflow acceptance
+
+- Interrogate: run an existing failing check in a disposable module, retain only reproduced failures, rerun them in the parent, and confirm original source hashes are unchanged. Record blocked commands separately.
+- Arena: use a fresh GPT-family judge under the Sol/Astra-only policy, preferably the other permitted model. Report same-family independence accurately. If no permitted judge runs, skip it explicitly. Never substitute unknown inheritance or an unsupported model.
+- Statechart: run the bundled upstream tests, then exercise the packaged launcher on passing and failing TLA+ models with explicit local dependency paths. Inspect its chart and report, bounded or unchecked properties, exit behavior and no-overwrite protection. Missing tools must produce diagnostics without global installation.
+- Ketchup Video: render a real scratch MP4, inspect a frame from every slide at chat size, and measure subtitle holds from decoded frames. This does not prove a plugin catalog can discover the new skill.
+- Publication gate: prepare the research, diff and package without committing, pushing or uploading when the user requests review first.
 
 ## Limits
 

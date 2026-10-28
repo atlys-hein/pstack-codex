@@ -1,0 +1,7 @@
+interface:
+  icon_small: "./assets/logo.png"
+  icon_large: "./assets/logo.png"
+  display_name: "Statechart"
+  short_description: "Check TLA+ rules and draw paths through system states"
+policy:
+  allow_implicit_invocation: true

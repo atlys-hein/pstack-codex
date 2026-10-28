@@ -12,7 +12,7 @@ Read the [Codex execution contract](../../pstack/CODEX.md). The parent owns expe
 
 ## Procedure
 
-1. Name the changed instruction and the behavior that should improve. Write a short rubric with concrete observable criteria for the judge. Include regressions and task completion, not just the behavior the new prose asks for.
+1. Name the changed instruction and the behavior that should improve. Write a short rubric with concrete observable criteria for the judge. Include regressions and task completion, not just the behavior the new prose asks for. Before a quantitative run, read **principle-explain-the-number** and name the result that would change a decision, the sample meaning, and the expected noise floor. A spread larger than the effect cannot support promotion.
 2. Prepare separate permitted working directories or actual worktrees with comparable starting artifacts. Put the assigned variant where an ordinary task would discover it. Keep writable files, ports, and other resources separate. Do not modify globally installed skills or settings.
 3. Author one ordinary user request and use it consistently. Change only the intended variant. Keep runtime capabilities and model settings comparable under the shared model policy. Use variation between the two permitted models only when explicitly requested, supported and relevant to the question.
 4. Run a bounded number of independent workers through native agents. Use **arena** when its comparison method fits. Respect runtime capacity and cost. If agents or sufficient isolation are unavailable, perform a limited direct dry run and report what it cannot establish.

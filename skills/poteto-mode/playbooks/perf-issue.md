@@ -2,7 +2,7 @@
 
 Read the [Codex execution contract](../../pstack/CODEX.md). The parent owns the measurement and the claim. Tie the fix to a reproducible workload rather than an intuition from source.
 
-1. Capture a baseline on the actual relevant surface. Record workload, environment, work completed, errors, and the metric. Read **benchmark-checklist** before trusting the number.
+1. Before measuring, read **principle-explain-the-number** and **benchmark-checklist**. Name the result that would change a decision and the expected noise floor. Capture a baseline on the actual relevant surface. Record workload, environment, work completed, errors, samples, spread, and the metric. If the spread is larger than the effect, resolve the measurement before claiming a result.
 2. Use **how** to connect the trace to the architecture. Consider these mechanisms in order, stopping when a supported change meets the target:
    1. Stop work whose result is unused.
    2. Reuse a result instead of repeating the work.

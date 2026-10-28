@@ -1,0 +1,7 @@
+interface:
+  icon_small: "./assets/logo.png"
+  icon_large: "./assets/logo.png"
+  display_name: "Ketchup video"
+  short_description: "Catch up on this chat with a short subtitled video"
+policy:
+  allow_implicit_invocation: true

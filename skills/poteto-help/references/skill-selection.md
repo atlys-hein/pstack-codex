@@ -14,6 +14,7 @@ Read this catalog when recommending a skill or resolving a close call. Read the 
 | Understand a change or subsystem, explained plainly | [`$teach`](../../teach/SKILL.md) |
 | Catch up on their own recent work on a topic | [`$recall`](../../recall/SKILL.md) |
 | Catch up on changes and list every waiting item with enough context to decide from the reply | [`$ketchup`](../../ketchup/SKILL.md) |
+| Catch up through a short subtitled slide video, with waiting decisions in text below it | [`$ketchup-video`](../../ketchup-video/SKILL.md) |
 | Know what a small diff could break outside itself | [`$blast-radius`](../../blast-radius/SKILL.md) |
 | Settle types and module shape before code that crosses a function boundary | [`$architect`](../../architect/SKILL.md) |
 | Get several attempts at one brief, merged into the best one | [`$arena`](../../arena/SKILL.md) |
@@ -29,6 +30,7 @@ Read this catalog when recommending a skill or resolving a close call. Read the 
 | Bring a verification skill and its feature map back in line with the app | [`$maintain-verification-skill`](../../maintain-verification-skill/SKILL.md) |
 | Formally verify a race, invariant, or property that tests rarely reach | [`$create-formal-verification-skill`](../../create-formal-verification-skill/SKILL.md) |
 | Bring formal verification back in line with changed code and distinguish drift from bugs | [`$maintain-formal-verification-skill`](../../maintain-formal-verification-skill/SKILL.md) |
+| Show a PM or designer a user-visible statechart checked by a TLA+ model, with the shortest paths to rule violations | [`$statechart`](../../statechart/SKILL.md) |
 | Vet a performance number before reporting or acting on it | [`$benchmark-checklist`](../../benchmark-checklist/SKILL.md) |
 | Run a large or cross-cutting change, or one to review after stepping away | [`$figure-it-out`](../../figure-it-out/SKILL.md) |
 | Keep a decision log during a run, and review it afterward | [`$show-me-your-work`](../../show-me-your-work/SKILL.md) |
@@ -48,6 +50,6 @@ Close calls:
 - **arena** compares alternative attempts and synthesizes one artifact. **swarm** covers slices or a declared race and produces one report.
 - **architect** settles the design before authorized implementation. A design-only request stops at the design. Add "with checkpoint" when the user wants to approve the design first.
 - **interrogate** reviews the selected diff. **blast-radius** traces consequences beyond it and seeks executable evidence of the key safety claim.
-- **recall** searches authorized recent history and current state. **ketchup** summarizes only this chat since the user's last message.
+- **recall** searches authorized recent history and current state. **ketchup** summarizes only this chat since the user's last message. **ketchup-video** presents that catch-up as a subtitled slide video and keeps waiting decisions in readable text.
 - **figure-it-out** designs one substantial run. The Orchestrate playbook coordinates a larger program, subject to the same permissions and host capabilities.
 

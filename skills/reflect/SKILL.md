@@ -37,6 +37,8 @@ Move an item to Backlog if an existing structural mechanism would enforce it mor
 
 A request to reflect alone produces reviewable proposed edits and their reasons. If the user also requested the skill updates, that authorization is enough for the in-scope local changes. Otherwise present concrete edits and ask before applying them. Do not create backlog tickets, PRs, or messages without separate authorization.
 
+Never edit an installed skill under `plugins/cache/`. Show the proposed editable destination before applying a change. For a maintained plugin, edit its owning source through its supported update workflow; for an approved personal override, copy into the repository’s skill directory or the documented user skill directory and explain precedence. Do not create an override merely because the cache is unwritable. A reflection request does not authorize a commit, push, PR, or plugin publication.
+
 For substantive skill work, use the available Codex **skill-creator** guidance. Prefer a focused change to an existing skill. Tune its description when discovery failed, and create a new skill only when no existing owner fits and the pattern is durable. Preserve supported invocation metadata.
 
 Validate touched skills with the available validator and inspect references. Return applied or proposed paths, what changed, deferred items, and rejected findings with reasons. Distinguish local recommendations from tickets actually created.

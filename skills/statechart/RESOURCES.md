@@ -1,0 +1,29 @@
+# Skill resources
+
+Start with [this skill](SKILL.md). The [shared Codex contract](../pstack/CODEX.md) owns execution rules, and the [package index](../pstack/INDEX.md) lists active skills.
+
+## Compiler and dependencies
+
+The launcher selects Node 22.18 to 22.x, Node 23.6 or later, Bun 1.1.5 or later, or Deno 2.0 or later. It also needs Java 11 or later and TLC. Set `TLA2TOOLS` to the absolute path of `tla2tools.jar`; set `JAVA` to an absolute Java binary when `java` is not on PATH. TLC 1.7.4 is the tested version. The command reports missing prerequisites and never installs tools.
+
+The [launcher](scripts/statechart) selects a supported TypeScript runtime and runs [statechart.ts](scripts/statechart.ts). The compiler, frontends, passes, backends, tests, charts, and complete TLC corpus are packaged under `scripts/`. View modules are executable code, not data. The optional [rendering guide](references/render.md) covers Pele 1.9.0.
+
+The CLI uses `TLA2TOOLS=/absolute/path/tla2tools.jar` and optional `JAVA=/absolute/path/java`. It performs no dependency installation. TLC 1.7.4 is available from [the TLA+ release](https://github.com/tlaplus/tlaplus/releases/tag/v1.7.4); the jar's SHA-256 is `936a262061c914694dfd669a543be24573c45d5aa0ff20a8b96b23d01e050e88`. Keep any authorized download outside the source repository and verify that checksum before executing it.
+
+For contributor validation, `scripts/package.json` declares `npm test`. The complete suite needs a Node version supporting TypeScript stripping and `node:module.registerHooks`, `fast-check@4.5.3`, Java, and the TLC jar. Set `TLA2TOOLS` and `JAVA` for live TLC tests; without `TLA2TOOLS`, those tests explicitly skip. Rendering tests install pinned Pele 1.9.0, Mermaid 11.16.0, and jsdom 26.1.0 into `$XDG_CACHE_HOME/statechart`; point `XDG_CACHE_HOME` and npm's cache at task-local directories and disable package lifecycle scripts. Do not set `STATECHART_UPDATE` during validation, since it rewrites fixtures. Report skips and unavailable dependencies separately from passing checks.
+
+## Interpret the report
+
+- In the chart, a state that breaks a rule has the class `breaks`. When only some model states behind it break the rule, it has the class `mayBreak`. The Legend names the rules of each mark. When two rules break, it names both on one mark, so say in the hand-off which state breaks which rule. In a regions chart, a state gets a mark when each combination of region states that includes it can break a rule. When a combination can break a rule and none of its states has a mark, each state in that combination gets a mark.
+- TLC goes past a state that breaks a rule, so the chart shows the states after a bug.
+- Because TLC goes past bugs, a model with no limit on its states can run without end. Keep the constants small, or add a CONSTRAINT.
+- With a VIEW or a SYMMETRY, TLC counts states that it treats as the same as one state, and the chart draws that one state. An arrow can lead to it rather than to the state that the step reaches, and the report says so.
+- TLC checks the rules in each state past a CONSTRAINT or an ACTION_CONSTRAINT, but it does not explore that state or check it for deadlock. When TLC's shortest path for a rule ends in such a state, the chart draws that state, and the report gives that path. The chart does not draw the other states past the bound. A deadlock in such a state does not show. TLC also checks the rules after each step that an ACTION_CONSTRAINT excludes, also when it reaches the next state another way. When TLC's shortest path for a rule ends with such a step, the chart draws that step.
+- The command checks the rules with TLC on the config as written, with one worker. When a rule breaks, the command removes that rule and runs TLC again, until no rule breaks. After the first break, each run stops at 100,000 distinct states, so that a large model does not run without end. When a run reaches that bound or stops on an error, the report lists the rules that it did not check under "Rules not checked", and the chart does not mark them. A rule that is not checked can hold or break. To check it, remove the rules that break from the config, or make the model smaller. The bound adds a module that changes TLC's order of the variables, so for a property TLC can find a different counterexample than a run without the bound.
+- `tlc.out` is what TLC printed on the config as written. When the chart does not show the bug path of a rule that breaks, `tlc-RULE.out` is what TLC printed for the run that found it. When TLC repeats its first warning, plain TLC prints it twice, but `tlc.out` shows it once, because TLC leaves the second copy out of the output that this command reads. That happens only when Java runs with `-XX:+UseParallelGC`, since otherwise TLC's first warning is its advice to pass that flag, which it prints once.
+
+## Source and Codex changes
+
+Ported from [cursor/plugins, statechart](https://github.com/cursor/plugins/tree/c742dd61706fbacc1b95f1a20b7b988cf096ce6c/pstack/skills/statechart) at commit `c742dd61706fbacc1b95f1a20b7b988cf096ce6c` (0.15.36), under the package's upstream license and notices. Preserve those root notices when redistributing this skill.
+
+The compiler and fixtures are retained from that source. Human-facing CLI console messages use the user-required `🚀` prefix; the test dependency probe writes JSON directly to stdout to preserve its machine-readable contract, and affected diagnostic assertions follow the prefix. The prerequisite resolver is adapted: the Codex port requires explicit local dependency paths instead of invoking mise or installing Java/TLC automatically. A CLI regression check verifies that missing TLC does not invoke mise. Instructions use native Codex capabilities, ordinary implicit discovery, scoped local artifacts, and honest optional-renderer reporting.
